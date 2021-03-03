@@ -18,6 +18,7 @@ defmodule PhxTodoAppWeb.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
+    resources "/cards", CardController
   end
 
   # Other scopes may use custom stacks.

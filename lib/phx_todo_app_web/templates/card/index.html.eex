@@ -1,0 +1,28 @@
+<h1>タスク一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>カード名</th>
+      <th>Done</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for card <- @cards do %>
+    <tr>
+      <td><%= card.name %></td>
+      <td><%= card.done %></td>
+
+      <td>
+        <span><%= link "詳細", to: Routes.card_path(@conn, :show, card) %></span>
+        <span><%= link "編集", to: Routes.card_path(@conn, :edit, card) %></span>
+        <span><%= link "削除", to: Routes.card_path(@conn, :delete, card), method: :delete, data: [confirm: "本当に削除してもよろしいですか？"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "新規作成", to: Routes.card_path(@conn, :new) %></span>

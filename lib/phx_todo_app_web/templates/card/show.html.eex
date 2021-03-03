@@ -1,0 +1,18 @@
+<h1>Show Card</h1>
+
+<ul>
+
+  <li>
+    <strong>タスク名</strong>
+    <%= @card.name %>
+  </li>
+
+  <li>
+    <strong>Done:</strong>
+    <%= @card.done %>
+  </li>
+
+</ul>
+
+<span><%= link "編集", to: Routes.card_path(@conn, :edit, @card) %></span>
+<span><%= link "戻る", to: Routes.card_path(@conn, :index) %></span>
