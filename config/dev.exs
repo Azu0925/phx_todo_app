@@ -74,3 +74,7 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :phx_todo_app, PhxTodoApp.Accounts.Guardian,
+  issuer: "phx_todo_app",
+  secret_key: "+nKTxlUJNYdFXYp7Tebnm3WlQNUZxvB8SmDm7dmLMlNbvAjkeorcUlCZp9t8PjJo"
