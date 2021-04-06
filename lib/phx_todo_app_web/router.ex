@@ -16,7 +16,7 @@ defmodule PhxTodoAppWeb.Router do
   scope "/", PhxTodoAppWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", CardController, :index
     resources "/users", UserController
     resources "/cards", CardController
   end
